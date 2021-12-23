@@ -1,0 +1,63 @@
+
+#radar_maps_container {
+    position: fixed;
+    left: 9px;
+    top: 0px;
+    border: none;
+    
+}
+#iframe_radar{
+    border:none;
+}
+#radar_maps_container.hide {
+    opacity:0;
+}
+#maps_container {
+    width: 364px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: -345px;
+    background-color: var(--main-panel-color);
+    opacity: 1;
+}
+.veto_entry {
+    display: flex;
+    margin-top: 5px;
+    width: 191px;
+    margin-left: -62px;
+    margin-right: -142px;
+    padding-right: 38px;
+    font-size: 17px;
+    opacity: 1;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+.veto_entry > div {
+    align-items: center;
+    color: #757575;
+    text-transform: uppercase;
+}
+.veto_entry .team_logo img {
+    max-height: 18px;
+    padding-right: 2px;
+    max-width: 21px;
+    opacity: 0;
+}
+.veto_entry .map_name.active {
+    font-weight: 600;
+    color: #fff;
+}
+
+.veto_entry .map_name {
+
+}
+
+.tournament_image{
+    background-image: url("../.././assets/veto/group.png");
+    width: 364px;
+    height: 53px;
+    margin-top: 16px;
+}

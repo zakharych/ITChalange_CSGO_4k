@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Facundo';
+    src: local('Facundo Black'), local('Facundo-Black'),
+        url('Facundo-Black.woff2') format('woff2'),
+        url('Facundo-Black.woff') format('woff'),
+        url('Facundo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }

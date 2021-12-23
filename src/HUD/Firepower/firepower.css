@@ -1,0 +1,127 @@
+@keyframes Drawout {
+	0%{opacity:0;}
+	50%{opacity:0.50;}
+	100%{opacity:1;}
+}
+
+.Firepower {
+    width: 442px;
+    height: 46px;
+    flex-direction: row;
+    opacity: 0;
+    transition: all 0.75s;
+    margin-bottom: 3px;
+    margin-top: 65px;
+    font-weight: 600;
+    left: 739px;
+    position: absolute;
+    z-index: -1;
+    animation-duration: 0.5s;
+    animation-name: Drawout;
+    display: flex;
+
+}
+
+.Firepower.hide {
+    display: none;
+}
+.money_container {
+	 display: flex;
+	 flex-direction: column;
+	 flex: 1;
+	 color: white;
+	 animation-duration:0.5s;
+	 animation-name:Drawout;
+}
+ .Firepower .money_container .title {
+	height: 20px;
+    width: 442px;
+    display: flex;
+    margin-top: 45px;
+    font-size: 12px;
+    padding-top: 1px;
+	letter-spacing: 1px;
+    justify-content: center;
+    background-color: var(--sub-panel-color);
+    animation-duration: 0.5s;
+    animation-name: Drawout;
+	
+	opacity: 0.90;
+}
+ .Firepower .money_container .valueLEFT {
+	flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    max-width: 442px;
+    margin-top: -33px;
+    justify-content: center;
+    z-index: -1;
+    animation-duration: 0.5s;
+    animation-name: Drawout;
+}
+ .Firepower .money_container .valueLEFT.CT {
+	 background-color: var(--color-new-t);
+}
+ .Firepower .money_container .valueLEFT.T {
+	 background-color: var(--color-new-ct);
+}
+
+ .Firepower .money_container .valueRIGHT {
+    position: absolute;
+    flex: 1 1;
+    margin-top: 33px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-content: center;
+    height: 12px;
+    width: 442px;
+    background-color: var(--color-new-t);
+    z-index: -2;
+	
+}
+ .Firepower .money_container .valueRIGHT.CT {
+	 background-color: var(--color-new-ct);
+}
+ .Firepower .money_container .valueRIGHT.T {
+	 background-color: var(--color-new-t);
+}
+ .Firepower .money_container .LeftEquipment {
+	 width: 150px;
+	 display: flex;
+	 opacity: 0;
+}
+ .Firepower .money_container .RightEquipment {
+	 width: 150px;
+	 display: flex;
+	 flex-direction: row-reverse;
+	 align-items: flex-end;
+	 opacity: 0;
+}
+ .Firepower .loss_container {
+	 width: 4px;
+	 display: flex;
+	 align-items: center;
+	 flex-direction: column;
+	 justify-content: center;
+}
+ .Firepower .loss_container .loss-box {
+	 height: 13px;
+	 width: 100%;
+	 background-color: #515254;
+	 margin-top: 1px;
+	 margin-bottom: 1px;
+}
+ .Firepower .loss_container .loss-box.active.CT {
+	 background-color: var(--color-new-ct);
+}
+ .Firepower .loss_container .loss-box.active.T {
+	 background-color: var(--color-new-t);
+}
+.Firepower .money_container .title .name {
+font-size: 12px;
+    padding-top:3px;
+
+}

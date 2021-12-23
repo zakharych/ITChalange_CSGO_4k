@@ -1,0 +1,298 @@
+.boxes {
+	position: fixed;
+	bottom: 455px;
+    opacity: 1;
+	&.left {
+	  left: 9px;
+	}
+  
+	&.right {
+	  right: -18px;
+	}
+  
+	&.hide {
+	  .utilitybox, .moneybox, .sidebox {
+		height: 0;
+		opacity: 0;
+	  }
+	}
+  }
+  
+  .utilitybox.hide, .moneybox.hide, .sidebox.hide {
+	height: 0;
+	opacity: 0;
+  }
+  
+
+  
+  .utilitybox {
+	width: 342px;
+	height: 42px;
+	display: flex;
+	flex-direction: row;
+	opacity: 1;
+	transition: all 0.75s;
+	background-color: rgba(0, 0, 0, 0.95);
+	margin-bottom: 4px;
+	margin-top: 4px;
+	flex-direction: column;
+	margin-bottom: 4px;
+	border-radius: 0px 0px 0 0;
+	.title_container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+		font-size: 16px;
+
+	}
+	.title {
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.grenades_container {
+		display: flex ;
+		flex: 1;
+		height: 46px;
+
+			svg {
+				height: 25px;
+				width:26px;		
+				margin-top: 3px;		
+			}
+		}
+	}
+
+  
+  .sidebox {
+    width: 370px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	opacity: 0;
+	transition: all 0.75s;
+	background-color: rgba(0, 0, 0, 0.90);
+	margin-bottom: 50px;
+	margin-top: 4px;
+  
+	/*background-image: url("../.././assets/veto/fon2.jpg");*/
+  }
+  
+  .side-box {
+	width: 370px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	opacity: 0.85;
+	transition: all 0.75s;
+	background-color: rgba(0, 0, 0, 0.95);
+	margin-bottom: 4px;
+	margin-top: 4px;
+  }
+  
+  .sidebox {
+	img {
+	  height: 70px;
+	  display: flex;
+	  flex-direction: row;
+	  opacity: 1;
+	  align-items: center;
+	}
+  
+	.title_container {
+	  color: none;
+	  height: none;
+	  width: none;
+	  font-size: none;
+	  display: none;
+	  flex-direction: none;
+  
+	  > div {
+		flex: 1;
+		display: none;
+		align-items: none;
+		font-weight: none;
+		font-size: none;
+	  }
+	}
+  
+	align-items: center;
+  
+	&.right {
+	  flex-direction: row-reverse;
+  
+	  .title_container > div {
+		flex-direction: row-reverse;
+		text-align: right;
+		padding-right: 10px;
+	  }
+	}
+  
+	&.left .title_container > div {
+	  flex-direction: row;
+	  text-align: left;
+	  padding-left: 10px;
+	}
+  
+	.image_container img {
+	  max-width: 360px;
+	  max-height: 70px;
+	}
+  }
+  
+  .utilitybox {
+	.title_container {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
+	  font-weight: 600;
+	  font-size: 16px;
+	}
+  
+	.title {
+	  height: 20px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+  
+	&.right .title {
+	  color: var(--color-new-ct);
+	}
+  
+	.grenades_container {
+		display: flex;
+		flex: 1;
+		height: 46px;
+  
+	  .grenade_container {
+		display: flex;
+		flex: 1;
+		color: white;
+		align-items: center;
+		font-weight: 600;
+		font-size: 20px;
+		justify-content: center;
+		text-shadow: 0px 0px 1px rgb(0 0 0), 0 0 rgb(0 0 0);
+		filter: drop-shadow(0px 0px 1px #1b1a27);
+	  }
+	}
+  
+	.grenade_container svg {
+		max-height: 30px;
+	  
+	}
+  }
+
+  
+  .moneybox {
+	font-weight: 600;
+	margin-bottom: -46px;
+  
+	&.left {
+	  margin-left: 0%;
+	}
+  
+	&.right {
+	  flex-direction: row-reverse;
+	  margin-left: 0%;
+	}
+  }
+  
+  .eq_container {
+	&.left {
+	  background-color: rgb(128, 62, 0);
+	  flex-direction: row-reverse;
+	}
+  
+	background-color: rgb(0, 92, 128);
+	height: 10px;
+	width: 150px;
+  }
+  
+  .moneybox {
+	width: 342px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	opacity: 1;
+	transition: all 0.75s;
+	background-color: rgba(0, 0, 0, 0.95);
+	margin-bottom: 4px;
+	margin-top: 4px;
+	font-weight: 600;
+	 
+	.money_container {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		color: white;
+		.title {
+			height: 25px;
+			display: flex;
+			align-items: flex-end;
+			font-size: 15px;
+			justify-content: center;
+		}
+		.value {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			font-size: 18px;
+			justify-content: center;
+		}
+	}
+	.loss_container {
+		width: 4px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		.loss-box {
+			height: 13px;
+			width: 100%;
+			background-color: #515254;
+			margin-top: 1px;
+			margin-bottom: 1px;
+		}
+		.loss-box.active.CT {
+			background-color: var(--color-new-ct);
+		}
+		.loss-box.active.T {
+			background-color: var(--color-new-t);
+		}
+	}
+}
+
+.moneybox.T .money_container .title {
+    color: var(--color-new-t);
+}
+
+.moneybox.CT .money_container .title {
+    color: var(--color-new-ct);
+}
+
+.moneybox.left .money_container .title {
+ 
+		margin-right: 5px;
+	}
+
+	.moneybox.right .money_container .title {
+ 
+		margin-left: 5px;
+	}
+
+
+	.moneybox.left .money_container .value {
+ 
+		margin-right: 5px;
+	}
+
+	.moneybox.right .money_container .value {
+ 
+		margin-left: 5px;
+	}

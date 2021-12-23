@@ -1,0 +1,13 @@
+[
+    {
+        "label": "Trivia",
+        "name":"trivia",
+        "inputs": [
+            {
+                "type": "text",
+                "name": "title",
+                "label": "Trivia title"
+            }
+        ]
+    }
+]
