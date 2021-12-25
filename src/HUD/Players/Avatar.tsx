@@ -1,5 +1,5 @@
 import React from 'react';
-import { isDev, port } from '../../api/api';
+// import { isDev, port } from '../../api/api';
 import { actions } from '../../App';
 import { avatars } from './../../api/avatars';
 import { Avatarka, Skull } from './../../assets/Icons';
@@ -7,8 +7,8 @@ import { Avatarka, Skull } from './../../assets/Icons';
 interface IProps {
   steamid: string,
   slot?: number,
-  height?: number,
-  width?: number,
+  height?: string,
+  width?: string,
   showSkull?: boolean,
   showCam?: boolean
 }
@@ -25,17 +25,17 @@ export default class Avatar extends React.Component<IProps, IState> {
   });
   }
   render(){
-    const { enableCams } = this.state;
+    // const { enableCams } = this.state;
     //const url = avatars.filter(avatar => avatar.steamid === this.props.steamid)[0];
     const avatarData = avatars[this.props.steamid];
     if(!Avatarka && !avatarData.url.length){
         return '';
     }
-    const slot = this.props.slot === 0 ? 10 : this.props.slot || 1;
-    const leftPosition = - 150*((slot-1)%5);
-    const topPosition = slot > 5 ? -150 : 0;
+    // const slot = this.props.slot === 0 ? 10 : this.props.slot || 1;
+    // const leftPosition = - 150*((slot-1)%5);
+    // const topPosition = slot > 5 ? -150 : 0;
     return (
-      <div className={`avatar`}>
+      <div className={`player_avatar`}>
           {
             this.props.showSkull ? <Skull height={this.props.height} width={this.props.width} /> : <img src={ avatarData.url || Avatarka} height={this.props.height} width={this.props.width} alt={'Avatar'} />
           }

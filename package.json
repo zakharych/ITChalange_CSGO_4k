@@ -1,6 +1,6 @@
 {
-  "name": "IT_Cyber_Games_2021",
-  "version": "2.0.1",
+  "name": "CS_GO_2021",
+  "version": "1.0.0",
   "homepage": "./",
   "private": true,
   "dependencies": {
