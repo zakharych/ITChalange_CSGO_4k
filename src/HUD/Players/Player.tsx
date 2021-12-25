@@ -188,19 +188,54 @@ export default class PlayerBox extends React.Component<IProps, IState> {
               <div className="player__game-info-item">
                 <div className="player__kills labels">
                   <div className="player__kills-icon"></div>
-                  <div className="player__kills-count">{player.stats.kills}</div>
+                  <div className="player__kills-count">
+                    {player.stats.kills}
+                  </div>
                 </div>
                 <div className="player__death values">
                   <div className="player__death-icon"></div>
-                  <div className="player__death-count">{player.stats.deaths}</div>
+                  <div className="player__death-count">
+                    {player.stats.deaths}
+                  </div>
                 </div>
               </div>
             </li>
             <li className="player__game-info-wrapper">
-              <div className="player__game-info-item player_info-guns"></div>
-              <div className="player__game-info-item player_info-grenades"></div>
+              <div className="player__game-info-item player__guns">
+                {primary || secondary ? (
+                  <Weapon
+                    weapon={primary ? primary.name : secondary.name}
+                    active={
+                      primary
+                        ? primary.state === "active"
+                        : secondary.state === "active"
+                    }
+                  />
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className="player__game-info-item player__grenades">
+                {grenades.map((grenade) => [
+                  <Weapon
+                    key={`${grenade.name}-${grenade.state}`}
+                    weapon={grenade.name}
+                    active={grenade.state === "active"}
+                    isGrenade
+                  />,
+                  grenade.ammo_reserve === 2 ? (
+                    <Weapon
+                      key={`${grenade.name}-${grenade.state}-double`}
+                      weapon={grenade.name}
+                      active={grenade.state === "active"}
+                      isGrenade
+                    />
+                  ) : null,
+                ])}
+              </div>
             </li>
-          </ul>
+          </ul>          
+          <div className="player__active-border"></div>
         </div>
       </div>
     );

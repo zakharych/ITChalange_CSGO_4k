@@ -36,33 +36,53 @@
   &.right {
     right: 10px;
     align-items: flex-end;
+    scale: (-1);
     .player {
       flex-direction: row-reverse;
-      .player_data {
+      .player__main-panel {
         flex-direction: row-reverse;
-        .hp_bar {
-          align-self: flex-end;
-        }
-        .row {
+        .player__hp-bar {
           flex-direction: row-reverse;
-          .grenades {
-            padding-left: 5px;
-          }
-          .username {
-            flex-direction: row-reverse;
-          }
-          .secondary_weapon {
-            padding-left: 10px;
-          }
-          .money {
-            justify-content: flex-end;
-          }
-          .weapon {
-            transform: scaleX(-1);
+          background: linear-gradient(90deg, #00000000, #00000042);
+          background-color: var(--color-t);
+        }
+        .player__info-bar {
+          flex-direction: row-reverse;
+          right: 0;
+          left: auto;
+          .player__name {
+            margin-right: 0.6em;
           }
         }
-        .avatar {
-          justify-content: center;
+      }
+
+      .player__game-info-list {
+        margin-right: 0.6em;
+        margin-left: 0;
+      }
+      .player__game-info-list {
+        flex-direction: row-reverse;
+        .player__game-info-item {
+          flex-direction: row-reverse;
+          .player__money {
+            margin-right: 0;
+            margin-left: 1.4em;
+          }
+          .player__kills {
+            order: 1;
+          }
+        }
+        .player__guns {
+          transform: scaleX(-1);
+          margin-right: 0;
+          flex-direction: row;
+          margin-left: 1.2em;
+          filter: drop-shadow(0px 0px 1px #1b1a27);
+        }
+        .player__grenades {
+          margin-left: unset;
+          margin-right: 1.2em;
+          filter: drop-shadow(0px 0px 1px #1b1a27);
         }
       }
     }
@@ -331,6 +351,7 @@
   }
 
   .player__panel {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -342,15 +363,17 @@
   }
   .player__info-bar {
     display: flex;
+    width: 100%;
     align-items: center;
     position: absolute;
     top: 50%;
     left: 0.6em;
     transform: translateY(-50%);
-    line-height: 1;
   }
   .player__main-panel {
     position: relative;
+    z-index: 10;
+    display: flex;
     height: 1.7em;
     width: 100%;
     font-size: 1em;
@@ -360,17 +383,22 @@
   }
 
   .player__hp {
+    text-align: right;
     margin-right: 0.6em;
+    min-width: 1.2em;
     filter: drop-shadow(0 1px 2px #1d2c46);
   }
   .player__name {
     filter: drop-shadow(0 1px 2px #1d2c46);
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .player__hp-bar {
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, #0085bd, #00b4ff);
+    background: linear-gradient(90deg, #00000042, #00000000);
+    background-color: var(--color-ct);
     transition: width 0.25s;
     transition-delay: 0s;
   }
@@ -390,16 +418,18 @@
   }
 
   .player__game-info-list {
+    display: flex;
+    z-index: 10;
     padding: 0;
     margin: 0;
     height: 100%;
-    margin-left: 22px;
-    display: flex;
+    margin-left: 0.6em;
   }
   .player__game-info-item {
     display: flex;
     align-items: center;
     height: 50%;
+    flex-shrink: 0;
   }
 
   .player__stuff {
@@ -435,7 +465,6 @@
     & svg {
       fill: white;
       object-fit: contain;
-
       height: 0.8em;
       width: 0.8em;
     }
@@ -445,6 +474,26 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
+  }
+
+  .player__grenades {
+    margin-left: 1.2em;
+    & svg {
+      fill: white;
+      object-fit: contain;
+      height: 1.1em;
+      width: 1.1em;
+    }
+  }
+
+  .player__guns {
+    margin-right: 1.2em;
+    justify-content: flex-end;
+    & svg {
+      object-fit: contain;
+      height: 90%;
+      width: 3.1em;
+    }
   }
 }
 
@@ -689,27 +738,20 @@
   opacity: 0;
 }
 
-.player__kills-icon {
+.player__kills-icon,
+.player__death-icon {
   background-image: url("../.././assets/veto/pricel.png");
-  width: 30px;
-  // margin-top: -10px;
+  width: 0.9em;
+  height: 0.9em;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  height: 30px;
-  margin-right: 10px;
-  /*filter: drop-shadow(0px 0px 1px #1b1a27);*/
+  margin-right: 0.3em;
+  filter: drop-shadow(0px 0px 1px #1b1a27);
 }
 
 .player__death-icon {
   background-image: url("../.././assets/veto/dead.png");
-  width: 30px;
-  // margin-top: -10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  height: 30px;
-  margin-right: 10px;
 }
 
 .label_KK {
@@ -881,27 +923,26 @@
   }
 }
 
-.teambox.T .player.active .player_data .active_border {
+.teambox.T .player.active .player__panel .player__active-border {
   background: linear-gradient(90deg, rgba(24, 23, 66, 0), #ffbc47);
 }
 
-.teambox.CT .player.active .player_data .active_border {
+.teambox.CT .player.active .player__panel .player__active-border {
   background: linear-gradient(90deg, rgba(24, 23, 66, 0), #28abf5);
 }
 
-.teambox.left .player.active .player_data .active_border {
+.teambox.left .player.active .player__panel .player__active-border {
   margin-left: -45px;
 }
 
-.teambox .player.active .player_data .active_border {
+.teambox .player.active .player__panel .player__active-border {
   position: absolute;
-  width: 302px;
-  height: 85px;
+  width: 100%;
+  height: 100%;
   top: 0;
-  z-index: 0;
 }
 
-.teambox.right .active_border {
+.teambox.right .player__active-border {
   transform: scaleX(-1);
 }
 
