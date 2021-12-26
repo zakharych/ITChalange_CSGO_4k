@@ -35,7 +35,7 @@ export default class Avatar extends React.Component<IProps, IState> {
     // const leftPosition = - 150*((slot-1)%5);
     // const topPosition = slot > 5 ? -150 : 0;
     return (
-      <div className={`player_avatar`}>
+      <div className={`player__avatar`}>
           {
             this.props.showSkull ? <Skull height={this.props.height} width={this.props.width} /> : <img src={ avatarData.url || Avatarka} height={this.props.height} width={this.props.width} alt={'Avatar'} />
           }
