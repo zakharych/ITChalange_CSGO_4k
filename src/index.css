@@ -31,26 +31,25 @@ code {
 }
 
 :root {
+  --main-fz:32px;
   --main-panel-color: #0b0b0b;
   --sub-panel-color: #0b0b0b;
-  --white-dull: rgba(0,0,0,0.781);
+  /* --white-dull: rgba(0,0,0,0.781); */
   --white-full: #fafafa;
   --white-half: hsla(0,0%,98%,0.5);
-  --color-gray: #bfbfbf;
+  /* --color-gray: #bfbfbf; */
   --color-moneys: #45ce72;
-  --dev-purple: #c800ff;
+  /* --dev-purple: #c800ff; */
   --color-t:  #ffae00 ;
   --color-ct: #00baff;
-  --color-new-t: #ffae00 ;
-  --color-new-ct: #00baff;
-  --color-bomb: #fc285b ;
-  --color-defuse: #00baff;
-  --darkCT: #00baff;
-  --lightCT: #00baff;
-  --darkT: #ffae00 ;
-  --lightT: #ffae00 ;
-  --mainCT: #00baff;
-  --mainT: #ffae00 ;
+  /* --color-bomb: #fc285b ; */
+  /* --color-defuse: #00baff; */
+  /* --darkCT: #00baff; */
+  /* --lightCT: #00baff; */
+  /* --darkT: #ffae00 ; */
+  /* --lightT: #ffae00 ; */
+  /* --mainCT: #00baff; */
+  /* --mainT: #ffae00 ; */
   --fon: #767c89;
 }
 

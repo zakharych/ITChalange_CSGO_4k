@@ -1,24 +1,26 @@
 .teambox {
   position: fixed;
   bottom: 10px;
+  left: 10px;
   display: flex;
   flex-direction: column;
   opacity: 1;
   transition: opacity 0.75s;
   // &.CT {
   //   .player .hp_bar {
-  //     background-color: var(--color-new-ct);
+  //     background-color: var(--color-ct);
   //   }
   // }
   // &.T {
   //   .player .hp_bar {
-  //     background-color: var(--color-new-t);
+  //     background-color: var(--color-t);
   //   }
   // }
   &.hide {
     opacity: 0;
   }
   &.right {
+    left: unset;
     right: 10px;
     align-items: flex-end;
     .player {
@@ -141,10 +143,10 @@
   //         width: 10px;
   //         height: 70px;
   //         &.CT {
-  //             background-color: var(--color-new-ct);
+  //             background-color: var(--color-ct);
   //         }
   //         &.T {
-  //             background-color: var(--color-new-t);
+  //             background-color: var(--color-t);
   //         }
   //     }
   //     .dead-stats {
@@ -317,7 +319,7 @@
     align-items: stretch;
     color: white;
     font-family: "Akrobat";
-    font-size: 32px;
+    font-size: var(--main-fz);
     background-color: #000;
     margin-bottom: 5px;
     &.dead {
@@ -452,7 +454,7 @@
   }
 
   .player__money {
-    color: #45ce72;
+    color: var(--color-moneys);
     margin-right: 1.4em;
     font-size: 0.8em;
   }
@@ -657,11 +659,11 @@
 //   // }
 
 //   // &.CT .player .freezetime_KAD .labels .stat-label {
-//   //   color: var(--color-new-ct);
+//   //   color: var(--color-ct);
 //   // }
 
 //   // &.T .player .freezetime_KAD .labels .stat-label {
-//   //   color: var(--color-new-t);
+//   //   color: var(--color-t);
 //   // }
 
 //   // .player .freezetime_KAD .values .stat-value {

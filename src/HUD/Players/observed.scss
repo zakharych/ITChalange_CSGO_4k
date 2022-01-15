@@ -151,12 +151,12 @@
 
 .observed {
   &.T {
-    border-bottom: 0px solid var(--color-new-t);
+    border-bottom: 0px solid var(--color-t);
     z-index: -2;
   }
 
   &.CT {
-    border-bottom: 0px solid var(--color-new-ct);
+    border-bottom: 0px solid var(--color-ct);
     z-index: -2;
   }
   .label_KK  {
@@ -192,28 +192,28 @@
         text-shadow: 0px 0px 1px black, 0 0 black;
       }
 /*&.T .label_KK{
-color: var(--color-new-t);
+color: var(--color-t);
 }
 &.T .label_DD{
-  color: var(--color-new-t);
+  color: var(--color-t);
   }
    &.T .label_AA{
-   color: var(--color-new-t);
+   color: var(--color-t);
      }
    &.T .label_ADR{
-    color: var(--color-new-t);
+    color: var(--color-t);
     }
     &.CT .label_KK{
-      color: var(--color-new-ct);
+      color: var(--color-ct);
         }
         &.CT .label_DD{
-          color: var(--color-new-ct);
+          color: var(--color-ct);
           }
            &.CT .label_AA{
-           color: var(--color-new-ct);
+           color: var(--color-ct);
              }
            &.CT .label_ADR{
-            color: var(--color-new-ct);
+            color: var(--color-ct);
             }*/
   &.T .health_armor_container {
     background-color: var(--main-panel-color);
@@ -277,11 +277,11 @@ color: var(--color-new-t);
   }
 
   &.T .sidebar {
-    background-color: var(--color-new-t);
+    background-color: var(--color-t);
   }
 
   &.CT .sidebar {
-    background-color: var(--color-new-ct);
+    background-color: var(--color-ct);
   }
 
   .sidebar {
@@ -401,22 +401,22 @@ margin-left: 2px;
   text-shadow: 0px 0px 0px black, 0 0 black;
 }
 
-.value {
-  display: flex;
-  font-weight: 600;
-  font-size: 17px;
-  margin-top: 3px;
-}
+// .value {
+//   display: flex;
+//   font-weight: 600;
+//   font-size: 17px;
+//   margin-top: 3px;
+// }
 
 .observed {
   &.CT {
     .stats_row .statistics .stat .label {
-      color: var(--color-new-ct);
+      color: var(--color-ct);
    
 
   &.T {
     .stats_row .statistics .stat .label {
-      color: var(--color-new-t);
+      color: var(--color-t);
     }
 
   }
@@ -436,12 +436,12 @@ margin-left: 2px;
   }
 
   &.CT .labels .stat-label {
-    color: var(--color-new-ct);
+    color: var(--color-ct);
     margin-right: -212px;
   }
 
   &.T .labels .stat-label {
-    color: var(--color-new-t);
+    color: var(--color-t);
     margin-right: -212px;
   }
 
@@ -541,10 +541,10 @@ fill: white;
 }
 
 .observed.CT .stats_row .health_armor_container .icon svg {
-fill: var(--color-new-ct);
+fill: var(--color-ct);
 }
 .observed.T .stats_row .health_armor_container .icon svg {
-fill: var(--color-new-t);
+fill: var(--color-t);
 }
 
 .observed .stats_row .ammo .ammo_icon_container svg{

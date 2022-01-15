@@ -62,10 +62,10 @@
     animation-name: Drawout;
 }
  .Firepower .money_container .valueLEFT.CT {
-	 background-color: var(--color-new-t);
+	 background-color: var(--color-t);
 }
  .Firepower .money_container .valueLEFT.T {
-	 background-color: var(--color-new-ct);
+	 background-color: var(--color-ct);
 }
 
  .Firepower .money_container .valueRIGHT {
@@ -78,15 +78,15 @@
     justify-content: center;
     height: 12px;
     width: 442px;
-    background-color: var(--color-new-t);
+    background-color: var(--color-t);
     z-index: -2;
 	
 }
  .Firepower .money_container .valueRIGHT.CT {
-	 background-color: var(--color-new-ct);
+	 background-color: var(--color-ct);
 }
  .Firepower .money_container .valueRIGHT.T {
-	 background-color: var(--color-new-t);
+	 background-color: var(--color-t);
 }
  .Firepower .money_container .LeftEquipment {
 	 width: 150px;
@@ -115,10 +115,10 @@
 	 margin-bottom: 1px;
 }
  .Firepower .loss_container .loss-box.active.CT {
-	 background-color: var(--color-new-ct);
+	 background-color: var(--color-ct);
 }
  .Firepower .loss_container .loss-box.active.T {
-	 background-color: var(--color-new-t);
+	 background-color: var(--color-t);
 }
 .Firepower .money_container .title .name {
 font-size: 12px;

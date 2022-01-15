@@ -42,12 +42,12 @@
 
 #encapsulator .wins_bar.CT,
 .alert_bar.CT {
-    background-color: var(--color-new-ct);
+    background-color: var(--color-ct);
 }
 
 #encapsulator .wins_bar.T,
 .alert_bar.T {
-    background-color: var(--color-new-t);
+    background-color: var(--color-t);
 }
 
 #series_container {
@@ -161,7 +161,7 @@
 }
 
 .wins_box.CT.win {
-    background-color: var(--color-new-ct);
+    background-color: var(--color-ct);
 
 }
 
@@ -170,7 +170,7 @@
 }*/
 
 .wins_box.T.win {
-    background-color: var(--color-new-t);
+    background-color: var(--color-t);
 
 }
 
@@ -230,10 +230,10 @@
 }
 
 .pointsl.CT, .pointsr.CT {
-    color: var(--color-new-ct);
+    color: var(--color-ct);
 }
 .pointsl.T, .pointsr.T {
-    color: var(--color-new-t);
+    color: var(--color-t);
 }
 
 .pointsl {

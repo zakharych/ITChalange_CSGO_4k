@@ -319,11 +319,11 @@ z-index: 2;
 	  height: 70px;
   
 	  &.CT {
-		background-color: var(--color-new-ct);
+		background-color: var(--color-ct);
 	  }
   
 	  &.T {
-		background-color: var(--color-new-t);
+		background-color: var(--color-t);
 	  }
 	}
   }
@@ -387,7 +387,7 @@ z-index: 2;
 		
 
 /*	&.T {
-	  box-shadow: var(--color-new-t) 0px 0px 0 0;
+	  box-shadow: var(--color-t) 0px 0px 0 0;
   
 	  &.show {
 		box-shadow: rgba(252, 40, 91, 1) 15px 15px 0 0;
@@ -395,7 +395,7 @@ z-index: 2;
 	}
   
 	&.CT {
-	  box-shadow: var(--color-new-ct) 0px 0px 0 0;
+	  box-shadow: var(--color-ct) 0px 0px 0 0;
   
 	  &.show {
 		box-shadow: rgba(64, 124, 250, 1) 15px 15px 0 0;
@@ -404,19 +404,19 @@ z-index: 2;
   }
   
 .win_text.T {
-	color: var(--color-new-t);
+	color: var(--color-t);
 }
 
 .win_text.CT {
-	color: var(--color-new-ct);
+	color: var(--color-ct);
 }
 
 #matchbar .score.CT {
-	background: var(--color-new-ct);
+	background: var(--color-ct);
 	color:white;
 }
 #matchbar  .score.T {
-	background: var(--color-new-t);
+	background: var(--color-t);
 	color:white;
 }
 
@@ -431,12 +431,12 @@ z-index: 2;
 */
 
 #matchbar .team.CT  {
-    color: var(--color-new-ct);
+    color: var(--color-ct);
 }
 
 
 #matchbar .team.T  {
-	color: var(--color-new-t);
+	color: var(--color-t);
 }
 
 .win_text_team1{
@@ -560,7 +560,7 @@ z-index: 2;
 	  .defuse_plant_container {
 		.defuse_plant_bar {
 		  height: 6px;
-		  background: var(--color-new-ct);
+		  background: var(--color-ct);
 		  position: absolute;
 		  top: -43px;
 		  margin-left: -156px;
