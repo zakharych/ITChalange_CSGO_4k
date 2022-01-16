@@ -29,6 +29,7 @@ interface State {
   winner: Team | null;
   showWin: boolean;
   forceHide: boolean;
+  teamBoxHeight: Number;
 }
 
 export default class Layout extends React.Component<Props, State> {
@@ -38,6 +39,7 @@ export default class Layout extends React.Component<Props, State> {
       winner: null,
       showWin: false,
       forceHide: false,
+      teamBoxHeight: 0,
     };
   }
 
@@ -58,6 +60,9 @@ export default class Layout extends React.Component<Props, State> {
     });
   }
 
+  updateTeamBoxHeight =(height:Number)=> {
+    this.setState({teamBoxHeight: height});
+  }
   getVeto = () => {
     const { game, match } = this.props;
     const { map } = game;
@@ -157,6 +162,7 @@ export default class Layout extends React.Component<Props, State> {
           side="left"
           current={game.player}
           isFreezetime={isFreezetime}
+          setTeamBoxHeight={this.updateTeamBoxHeight}
         />
         <TeamBox
           team={right}
@@ -174,7 +180,7 @@ export default class Layout extends React.Component<Props, State> {
           isFreezetime={isFreezetime}
           map={game.map}
         />
-        <SideBox side="left">
+        <SideBox side="left" offset={this.state.teamBoxHeight}>
           <MoneyBox
             team={left.side}
             side="left"
@@ -193,7 +199,7 @@ export default class Layout extends React.Component<Props, State> {
             show={isUtilityLevel}
           />
         </SideBox>
-        <SideBox side="right">
+        <SideBox side="right"  offset={this.state.teamBoxHeight}>
           <MoneyBox
             team={right.side}
             side="right"

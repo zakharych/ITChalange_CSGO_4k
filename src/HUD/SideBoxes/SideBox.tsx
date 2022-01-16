@@ -44,11 +44,12 @@ import './sideboxes.scss'
 type SideBoxProps= {
     side:'left' | 'right';
     children: React.ReactNode;
+    offset: Number;
 }
 
 export default function SideBox(props: SideBoxProps) {
     return (
-        <div className={`boxes ${props.side}`}>
+        <div className={`boxes ${props.side}`} style={{bottom:Number(`${props.offset}`)+14}}>
             {props.children}
         </div>
     )
