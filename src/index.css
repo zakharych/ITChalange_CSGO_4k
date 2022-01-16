@@ -3,6 +3,10 @@
 @import "fonts/TTNormsPro.css";
 @import "fonts/Akrobat.css";
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #root {

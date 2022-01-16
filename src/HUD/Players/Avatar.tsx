@@ -7,8 +7,8 @@ import { Avatarka, Skull } from './../../assets/Icons';
 interface IProps {
   steamid: string,
   slot?: number,
-  height?: string,
-  width?: string,
+  height?: string | number | undefined,
+  width?: string | number | undefined,
   showSkull?: boolean,
   showCam?: boolean
 }

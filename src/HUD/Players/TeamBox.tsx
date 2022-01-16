@@ -22,7 +22,7 @@ export default function TeamBox(props: Props) {
         props.setTeamBoxHeight(newHeight);
       }
     }
-  }, [listRef, props]);
+  }, [listRef]);
 
   return (
     <div ref={listRef} className={`teambox ${props.team.side} ${props.side}`}>
