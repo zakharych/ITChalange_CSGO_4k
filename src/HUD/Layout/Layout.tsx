@@ -1,7 +1,7 @@
 import React from "react";
 import TeamBox from "./../Players/TeamBox";
 import MatchBar from "../MatchBar/MatchBar";
-import SeriesBox from "../MatchBar/SeriesBox";
+import SeriesBox, { OrganizerLogo, SeriesInfo } from "../MatchBar/SeriesBox";
 import Observed from "./../Players/Observed";
 import { CSGO, Team } from "csgogsi-socket";
 import { Match } from "../../api/interfaces";
@@ -60,9 +60,9 @@ export default class Layout extends React.Component<Props, State> {
     });
   }
 
-  updateTeamBoxHeight =(height:Number)=> {
-    this.setState({teamBoxHeight: height});
-  }
+  updateTeamBoxHeight = (height: Number) => {
+    this.setState({ teamBoxHeight: height });
+  };
   getVeto = () => {
     const { game, match } = this.props;
     const { map } = game;
@@ -147,6 +147,8 @@ export default class Layout extends React.Component<Props, State> {
         <Pause phase={game.phase_countdowns} />
         <Timeout map={game.map} phase={game.phase_countdowns} />
         <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
+        <SeriesInfo map={game.map} match={match} />
+        <OrganizerLogo />
 
         <Tournament />
 
@@ -199,7 +201,7 @@ export default class Layout extends React.Component<Props, State> {
             show={isUtilityLevel}
           />
         </SideBox>
-        <SideBox side="right"  offset={this.state.teamBoxHeight}>
+        <SideBox side="right" offset={this.state.teamBoxHeight}>
           <MoneyBox
             team={right.side}
             side="right"
