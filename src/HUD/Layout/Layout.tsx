@@ -19,6 +19,7 @@ import Pause from "../PauseTimeout/Pause";
 import Timeout from "../PauseTimeout/Timeout";
 import MVP from "./../MVP/mvp";
 import Firepower from "../Firepower/firepower";
+import PlayersAlive from "../PlayersAlive";
 
 interface Props {
   game: CSGO;
@@ -117,18 +118,12 @@ export default class Layout extends React.Component<Props, State> {
 
     return (
       <div className="layout">
-        <div className={`players_alive`}>
-          <div className="title_container">Players alive</div>
-          <div className="counter_container">
-            <div className={`team_counter ${left.side}`}>
-              {leftPlayers.filter((player) => player.state.health > 0).length}
-            </div>
-            <div className={`vs_counter`}>VS</div>
-            <div className={`team_counter ${right.side}`}>
-              {rightPlayers.filter((player) => player.state.health > 0).length}
-            </div>
-          </div>
-        </div>
+        <PlayersAlive
+          left={left}
+          right={right}
+          leftPlayers={leftPlayers}
+          rightPlayers={rightPlayers}
+        />
         <Killfeed />
         <Overview match={match} map={game.map} players={game.players || []} />
         <RadarMaps match={match} map={game.map} game={game} />
