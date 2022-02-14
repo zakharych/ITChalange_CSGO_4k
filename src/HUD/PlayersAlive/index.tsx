@@ -11,7 +11,6 @@ interface Props {
 
 export default function PlayersAlive(props: Props) {
   const { left, right, leftPlayers, rightPlayers } = props;
-  console.log(left.side);
 
   return (
     <div className={s.players_alive}>
