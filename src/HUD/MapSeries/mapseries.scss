@@ -64,19 +64,19 @@
 }
 
 #timeout {
+  font-size: var(--main-fz);
   position: absolute;
-  left: 828px;
-  transform: translateX(0%);
-  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 170px;
   background-color: rgba(0, 0, 0, 0.95);
-  width: 264px;
+  width: 10em;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   overflow: hidden;
-  height: 62px;
-  font-size: 20px;
+  height: 3em;
   transition: opacity 0.95s;
   opacity: 0;
   text-shadow: 0px 0px 1px black, 0 0 black;
@@ -86,36 +86,20 @@
   z-index: 3;
 }
 
-.timeout_text {
-  text-align: center;
-  text-overflow: clip;
-}
-
-.timeout_name {
-  width: 250px;
-  max-width: 250px;
-  padding-left: 7px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  /* display: flex; */
-  justify-content: center;
-  margin-top: 9px;
-}
-
 #pause {
+  position: relative;
+  font-size: var(--main-fz);
   text-transform: uppercase;
   position: absolute;
-  left: 828px;
-  transform: translateX(0%);
-  top: 117px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 170px;
   background: #0b0b0b;
-  width: 264px;
+  width: 10em;
+  height: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
-  font-size: 20px;
   transition: opacity 0.95s;
   opacity: 0;
   text-shadow: 0px 0px 1px black, 0 0 black;
@@ -126,20 +110,15 @@
 }
 
 .pause_icon {
+  position: absolute;
+  top: -156px;
   height: 70px;
   width: 155px;
-  /* background-color: #232323d4; */
-  margin-left: -50%;
-  margin-top: -68%;
   background-image: url("../.././assets/veto/icon_pause_default.png");
   background-repeat: no-repeat;
   background-size: 50px;
   background-position-x: center;
   background-position-y: center;
-}
-
-.pause_name {
-  margin-left: 20px;
 }
 
 #round_timerpause.hide,
